@@ -22,6 +22,9 @@ services:
       args:
         - WITH_XDEBUG=true
     container_name: bewelcome_web
+    env_file:
+      - .env
+      - .env.local
     init: true
     depends_on:
       - db
