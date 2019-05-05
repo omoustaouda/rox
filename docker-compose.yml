@@ -23,11 +23,11 @@ services:
     depends_on:
       - db
     volumes:
-      - ./:/var/Code
+      - ./:/var/Code/
     ports:
       - 127.0.0.1:8000:8000 # Expose development app instance only on localhost
-    working_dir: /var/Code
-    command: "sh -x -c 'sleep 3 &&
+    working_dir: /var/Code/
+    command: "sh -x -c '
               composer install &&
               npm install &&
 
